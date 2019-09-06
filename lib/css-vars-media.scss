@@ -1,0 +1,33 @@
+@mixin css-vars-media($theme, $medias) {
+
+  $stored-medias: ();
+
+  :root {
+    @each $property, $values in $theme {
+      #{$property}: unquote(nth($values, 1));
+    }
+  }
+
+  @each $property, $values in $theme {
+    @each $variant, $value in nth($values, 2) {
+      @if not index($stored-medias, $variant) {
+        $stored-medias: append($stored-medias, $variant);
+      }
+    }
+  }
+
+  @each $key, $value in $medias {
+    @if index($stored-medias, $key) {
+      @media #{$value} {
+        :root {
+          @each $property, $values in $theme {
+            @if map-has-key(nth($values, 2), $key) {
+              #{$property}: unquote(map-get(nth($values, 2), $key));
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

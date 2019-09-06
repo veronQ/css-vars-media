@@ -1,0 +1,27 @@
+{
+  "name": "css-vars-media",
+  "version": "1.0.0",
+  "description": "Easily define custom properties and their variants",
+  "main": "lib/css-vars-media.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VeronQ/css-vars-media.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "custom properties",
+    "css variables",
+    "media",
+    "media queries"
+  ],
+  "author": {
+    "name": "Quentin Veron",
+    "email": "qveron@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VeronQ/css-vars-media/issues"
+  }
+}
