@@ -10,7 +10,7 @@
 ## Installation
 
 ```sh
-$ npm install css-vars-media
+$ npm install --save-dev css-vars-media
 ```
 
 ## Usage
@@ -115,6 +115,8 @@ Refer to `$theme` and `$medias`.
 ## Support
 
 See current [support for Custom Properties](https://caniuse.com/#feat=css-variables).
+
+> **92.85%** support as of September 2019.
 
 ## License
 
